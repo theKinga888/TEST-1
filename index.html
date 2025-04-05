@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>美食樂園</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🍱 美食樂園</h1>
+    <nav>
+      <a href="#">首頁</a>
+      <a href="#">菜單</a>
+      <a href="#">聯絡我們</a>
+    </nav>
+    <div class="cart">🛒 購物車：<span id="cart-count">0</span> 件商品</div>
+  </header>
+
+  <main class="menu">
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="滷肉飯">
+      <h2>滷肉飯</h2>
+      <p>價格：NT$80</p>
+      <button>加入購物車</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="雞排">
+      <h2>雞排</h2>
+      <p>價格：NT$70</p>
+      <button>加入購物車</button>
+    </div>
+
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="珍珠奶茶">
+      <h2>珍珠奶茶</h2>
+      <p>價格：NT$50</p>
+      <button>加入購物車</button>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 美食樂園 All rights reserved.</p>
+  </footer>
+
+  <script>
+    let cartCount = 0;
+    const cartCountElement = document.getElementById("cart-count");
+    const buttons = document.querySelectorAll("button");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        cartCount++;
+        cartCountElement.textContent = cartCount;
+        alert("已加入購物車！");
+      });
+    });
+  </script>
+
+</body>
+</html>
